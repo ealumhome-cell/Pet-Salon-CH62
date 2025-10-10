@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #4CAF50; /* Green header */
+    color: white;
+    padding: 20px;
+    border-bottom: 5px solid #45a049;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Styles for the information sections */
+.registration-info, .registered-pets {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #e8f5e9; /* Lighter green background */
+}
+
+h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+#petCount {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+#petList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#petList li {
+    background-color: #c8e6c9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+    }
+}
