@@ -54,4 +54,25 @@ function displayPetNames() {
 window.onload = function() {
     displayPetCount();
     displayPetNames();
-};
+}
+
+// A Pet class is defined with a constructor method that initializes an object with name, species, and age properties.
+class Pet {
+  constructor(name, species, age) {
+    this.name = name;
+    this.species = species;
+    this.age = age;
+  }
+
+  }
+
+// Three new Pet objects are created using the `new` keyword.
+const pet1 = new Pet('Violet', 'Dog', 11);
+const pet2 = new Pet('Ruby', 'dog', 2);
+const pet3 = new Pet('Jewel', 'dog', 2);
+
+// Access and display the properties of the pets.
+console.log(pet1); // Pet { name: ' Violet', species: 'Dog', age: 5 }
+console.log(pet2); // Pet { name: 'Ruby', species: 'Cat', age: 3 }
+console.log(pet3); // Pet { name: 'Jewel', species: 'Turtle', age: 12 }
+
