@@ -76,3 +76,60 @@ console.log(pet1); // Pet { name: ' Violet', species: 'Dog', age: 5 }
 console.log(pet2); // Pet { name: 'Ruby', species: 'Cat', age: 3 }
 console.log(pet3); // Pet { name: 'Jewel', species: 'Turtle', age: 12 }
 
+// Assume this is your array of pets
+let petSalon = {
+    pets: []
+};
+
+// Renamed from displayPet() to displayRow()
+function displayRow(pet) {
+    const tableBody = document.getElementById("pet-table-body");
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>${pet.name}</td>
+        <td>${pet.age}</td>
+        <td>${pet.gender}</td>
+        <td>${pet.type}</td>
+        <td>${pet.breed}</td>
+        <td>${pet.service}</td>
+    `;
+    tableBody.appendChild(row);
+}
+
+// Example usage assuming you have a way to populate petSalon.pets
+// For example, if you have a form submission, you would call this function.
+// Here is a sample loop for demonstration:
+function displayAllPets() {
+    // Clear existing table rows before re-displaying
+    const tableBody = document.getElementById("pet-table-body");
+    tableBody.innerHTML = "";
+
+    // Loop through all pets in the salon and call displayRow for each one
+    for (let pet of petSalon.pets) {
+        displayRow(pet);
+    }
+}
+
+// Call the function to display pets when the page loads
+window.onload = displayAllPets;
+
+// Example of adding a new pet and updating the display
+function addPet(newPet) {
+    petSalon.pets.push(newPet);
+    displayAllPets(); // Re-display all pets to include the new one
+}
+
+// Example of how you would get pet info and add it
+// from a form (assuming you have inputs with corresponding IDs)
+document.getElementById("your-register-button-id").addEventListener("click", function() {
+    let newPet = {
+        name: document.getElementById("pet-name").value,
+        age: document.getElementById("pet-age").value,
+        gender: document.getElementById("pet-gender").value,
+        type: document.getElementById("pet-type").value,
+        breed: document.getElementById("pet-breed").value,
+        service: document.getElementById("pet-service").value,
+    };
+    addPet(newPet);
+});
