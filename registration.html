@@ -33,63 +33,44 @@
     </div>
   </nav>
 
-  <div class="card mx-auto text-center w-50">
-    <h1>Register Your Pet</h1>
-    <form id="petRegistrationForm" class="card-body">
-        <label for="pet-name">Name:</label>
-        <input type="text" id="pet-name" name="name" required><br><br>
-
-        <label for="pet-age">Age:</label>
-        <input type="number" id="pet-age" name="age" required><br><br>
-
-        <label for="pet-gender">Gender:</label>
-        <input type="text" id="pet-gender" name="gender" required><br><br>
-
-        <label for="pet-breed">Breed:</label>
-        <input type="text" id="pet-breed" name="breed" required><br><br>
-
-        <label for="pet-service">Service:</label>
-        <input type="text" id="pet-service" name="service" required><br><br>
-
-        <label for="pet-type">Type:</label>
-        <select id="pet-type" name="type" required>
-            <option value="" disabled selected>Select a type</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="bird">Bird</option>
-            <option value="reptile">Reptile</option>
-            <option value="other">Other</option>
-        </select><br><br>
-
-        <button type="submit">Register Pet</button>
-    </form>
-  </div>
-   
-
-    <h2>Registered Pets:</h2>
-    <div id="registeredPetsList"></div>
-
-     <!-- Other body content -->
-
-  <div class="container mt-5">
-    <h3>Registered Pets</h3>
-    <table class="table table-striped table-bordered table-hover">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Age</th>
-          <th scope="col">Gender</th>
-          <th scope="col">Type</th>
-          <th scope="col">Breed</th>
-          <th scope="col">Service</th>
-        </tr>
-      </thead>
-      <tbody id="pet-table-body">
-        <!-- Pet rows will be displayed here -->
-      </tbody>
-    </table>
+<section class="containter m-5">
+  <form>
   </div>
 
+  <div class="mb-3">
+        <label class="form-lable">Breed:</label>
+        <select class="form-select" type="number" id="petBreed" required>
+          <option value="mixed">Mixed</option>
+          <option value="chihuahua">Chihuahua</option>
+          <option value="Pit Bully">Pit Bully</option>
+          <option value="frenchy">Frenchy</option>
+        </select>
+  </div>
+
+
+   <div class="mb-3">
+        <label class="form-lable">Gender</label>
+        <select class="form-select" name="Gender" id="petGender" required>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+   </div>
+
+   <div class="mb-3">
+        <label class="form-lable">Service</label>
+        <select class="form-select" name="service" id="petService" required>
+          <option value="">Select Service</option>
+          <option value="grooming">Grooming</option>
+          <option value="shampoo">Shampoo</option>
+          <option value="nail clipping">Nail Clipping</option>
+        </select>
+   </div>
+
+   <div class="d-flex justify-content-end">
+         <button type="submit" class="btn-primary m-2">Register</button>
+         <button type="reset" class="btn-secondary m-2">Reset Form</button>
+
+      
   <!-- Include Bootstrap JS bundle before your custom script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="scripts/registration.js"></script>
