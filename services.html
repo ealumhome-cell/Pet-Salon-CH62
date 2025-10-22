@@ -27,37 +27,69 @@
         
       </ul>
     </div>
+</nav>
 
-    
-    <h1>Services</h1>
 
-    <form id="serviceForm" class="container m-5 bg-light p-4">
+<h1>Services</h1>
+  
+   <form id="servicesForm" class="container m-5 bg-light border p-4">
 
-      <div class="m-3"
-        <label class="form label">Service</label>
-        <input type="text" id="serviceName" class="form control" placeholder="Grooming">
-      </div>
-        <label class="form-lable">Description</label>
-        <input type="text" id="servicedescription" class"form control" required>
+        <div class="mb-3">
+            <label class="form-label">Service</label>
+            <input type="text" id="serviceName" class="form-control"  placeholder="Grooming" required>
+        </div>
 
-        <label class="d-flex justify-content-end"> 
-        <input type="reset" id="price" name="Price" required><br><br>
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="text" id="serviceDescription" class="form-control" placeholder="Includes..." required>
+        </div>
 
-        
-          
-  </div> class"mb-3">
-       label class-"form-lable">Gender
+        <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input type="number" id="servicePrice" placeholder="55.99" class="form-control" required step="any">
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary m-1">Save</button>
+            <button type="reset" class="btn btn-secondary m-1">Reset</button>
+        </div>
+
+    </form>
+  
+   </div>
+
+   <div class="d-flex justify-content-end">
+         <button id="your-register-button-id" type="submit" class="btn-primary m-2">Register</button>
+         <button type="reset" class="btn-secondary m-2">Reset Form</button>
+   </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Breed</th>
+        <th scope="col">Service</th>
+      </tr>
+    </thead>
+    <tbody id="pet-table-body">
+    </tbody>
+  </table>
+      
+  <!-- Include Bootstrap JS bundle before your custom script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="./scripts/registration.js"></script>
+
+
    
 
-    <h2>Services:</h2>
-    <div id="registeredPetsList"></div>
+ 
 
 
   </div>
 <nav>
 
-
-    <h1>Services</h1>
     
 </body>
 </html>
