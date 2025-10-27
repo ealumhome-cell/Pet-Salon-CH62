@@ -1,0 +1,42 @@
+/* Custom Properties for Light Mode */
+:root {
+    --button-color: #333;
+    --background-color: #3f2727;
+    --surface-color: #f8f8f8;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Properties for Dark Mode */
+.dark-mode {
+    --button-color: #e0e0e0;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Base Styles */
+body {
+    --background-color: var(--background-color);
+    --color: var(--text-color);
+    --transition: background-color 0.3s ease, color 0.3s ease;
+    --margin: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+
+
+/* Main Content */
+main {
+    padding: 2rem 0;
+}

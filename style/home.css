@@ -1,7 +1,4 @@
 .home-bg {
-    background-image: url(../images/american-bully.jpg);
+    background-image: url('../img1.jpeg');
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    
 }
